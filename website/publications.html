@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stanford High Assurance Computer Architectures Lab</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300&display=swap" rel="stylesheet">    <style>
+      body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: 'Source Sans Pro', sans-serif
+      }
+      img {
+        width: 140px;
+        height: 140px;
+        border-radius: 20%;
+        object-fit: cover;
+      }
+      li {
+        margin-bottom: 1em;
+      }
+    </style>
+  </head>
+
+  <body>
+
+  <!-- Links (sit on top) -->
+  <div class="top_bar_wrapper" id="home"> 
+    <div class="top_bar">
+        <div class="col_button">
+          <a href="index.html#about" class="nav_button">HOME</a>
+        </div>
+        <div class="col_button">
+          <a href="index.html#about" class="nav_button">ABOUT</a>
+        </div>
+        <div class="col_button">
+          <a href="index.html#people" class="nav_button">PEOPLE</a>
+        </div>
+        <div class="col_button">
+          <a href="index.html#projects" class="nav_button">PROJECTS</a>
+        </div>
+        <div class="col_button">
+          <a href="index.html#publications" class="nav_button">PUBLICATIONS</a>
+        </div>
+        <div class="col_button">
+          <a href="index.html#media" class="nav_button">MEDIA</a>
+        </div>
+        <div class="col_button">
+          <a href="index.html#joining" class="nav_button">JOINING</a>
+        </div>
+    </div>
+  </div>
+
+  <!-- Background -->
+  <div class="background_gray">
+    <div class="container_row">
+      <div class="home_view_L">Publications</div>
+      <div class="home_view_M">
+      </div>
+      <div class="home_view_R">
+      </div>
+    </div>
+
+     <ul class="publications_page_list">
+      <li>
+        <div class="publication">MICRO '21</div>
+        "Synthesizing Formal Models of Hardware from RTL for Efficient Verification of Memory Model Implementations".
+        Yao Hsiao, Dominic P. Mulligan, Nikos Nikoleris, Gustavo Petri, and Caroline Trippel.
+        In Proceedings of the 54th International Symposium on Microarchitecture (MICRO), October 2021.
+        <a href="pubs/hsiao_MICRO21.pdf" target="_blank" class="download_icon"></a>
+          <a href="https://github.com/yaohsiaopid/rtl2uspec/" target="_blank" class="github_icon"></a>
+            <a href="https://www.youtube.com/watch?v=GFj1cmou4Yg&ab_channel=YaoHsiao" target="_blank" class="video_icon"></a>
+      </li>
+      <li><div class="publication"><b>FMCAD '21</b></div>
+        "Scaling Up Hardware Accelerator Verification using \aqed with Functional Decomposition".
+        Saranyu Chattopadhyayi, Florian Lonsing, Luca Piccolboni, Deepraj Soni, Peng Wei, Xiaofan Zhang, Yuan Zhou, Luca Carloni, Deming Chen,
+        Jason Cong, Ramesh Karri, Zhiru Zhang, Caroline Trippel, Clark Barrett, and Subhasish Mitra.
+        In Proceedings of the 2021 Conference on Formal Methods in Computer Aided Design (FMCAD),
+        October 2021.
+        <!--<a href="pubs/.pdf" target="_blank" class="noline fa fa-download"><span class="label"></a>
+        -->
+      </li>
+
+      <li><div class="publication"><b>PLDI '21</b></div>
+        "Porcupine: A Synthesizing Compiler for Vectorized Homomorphic Encryption".
+        Meghan Cowan, Deeksha Dangwal, Armin Alaghi, Caroline Trippel, Vincent T. Lee, and Brandon Reagen.
+        In Proceedings of the 42nd ACM SIGPLAN International Conference on Programming Language Design and Implementation (PLDI),
+        June 2021.
+        <a href="pubs/porcupine-pldi-21.pdf" target="_blank" class="download_icon"></a>
+      </li>
+
+      <li><div class="publication"><b>ISCA '21</b></div>
+        Jose Rodrigo Sanchez Vicarte, Pradyumna Shome, Nandeeka Nayak, Caroline Trippel, Adam Morrison,
+        David Kohlbrenner, Christopher W. Fletcher. “Opening Pandora’s Box: A Systematic Study of New Ways
+        Microarchitecture Can Leak Private Data”. In Proceedings of the 48th ACM/IEEE International Symposium
+        on Computer Architecture (ISCA), June 2021.										
+        <a href="pubs/pandora-isca-21.pdf" target="_blank" class="download_icon"></a>
+        
+      </li>
+
+      <li><div class="publication"><b>ASPLOS '21</b></div>
+        "RecSSD: Near Data Processing for Solid State Drive Based Recommendation Inference Extended Abstract".
+        Mark Wilkening, Udit Gupta, Samuel Hsia, Caroline Trippel, Carole-Jean Wu, David Brooks, and Gu-Yeon Wei.
+        In Proceedings of the 26th International Conference on Architectural Support for
+                            Programming Languages and Operating Systems (ASPLOS), April 2021.
+        <a href="pubs/recssd-asplos-21.pdf" target="_blank" class="download_icon"></a>
+      </li>
+      
+      <li><div class="publication"><b>MLSys '21</b></div>
+        "Understanding and Improving Failure Tolerant Training for Deep Learning Recommendation with Partial Recovery".
+        Kiwan Maeng, Shivam Bharuka, Isabel Gao, Mark Jeffrey, Vikram Saraph, Bor-Yiing Su, Caroline Trippel, Jiyan Yang, Mike Rabbat, Brandon Lucia, and Carole-Jean Wu.
+        In Proceedings of the 3rd Conference on Machine Learning and Systems (MLSys), April 2021.
+        <a href="pubs/cpr-mlsys-21.pdf" target="_blank" class="download_icon"></a>
+      </li>
+      
+      <li><div class="publication"><b>ISCA '20</b></div>
+        "TransForm: Formally Specifying Transistency Models and Synthesizing Enhanced Litmus Tests".
+        Naorin Hossain, Caroline Trippel, and Margaret Martonosi.
+        In Proceedings of the 47th International Symposium on Computer Architecture (ISCA), June 2020.
+        <a href="pubs/trippel_ISCA20.pdf" target="_blank" class="download_icon"></a>
+      </li>
+
+      <li><div class="publication"><b>Princeton University '19</b></div>
+        "Concurrency and Security Verification in Heterogeneous Parallel Systems".
+        Caroline Trippel.
+        PhD Dissertation. Princeton University. November 2019.
+        <a href="pubs/Trippel_princeton_0181D_13196.pdf" target="_blank" class="download_icon"></a>
+      </li>
+      
+      <li><div class="publication"><b>TOP PICKS '19</b></div>
+        "Security Verification through Automatic Hardware-Aware Exploit Synthesis: The CheckMate Approach".
+        Caroline Trippel, Daniel Lustig, and Margaret Martonosi.
+        IEEE Micro, 39 (3), May-June 2019.
+        Issue: Top Picks from the Computer Architecture Conferences of 2018.
+        <a href="pubs/ctrippel_IEEETopPicks19.pdf" target="_blank" class="download_icon"></a>
+      </li>
+
+      <li><div class="publication"><b>FMCAD '18</b></div>
+        "ILA-MCM: Integrating Memory Consistency Models with Instruction-Level Abstractions for Heterogeneous System-on-Chip Verification".
+        Hongce Zhang, Caroline Trippel, Yatin A. Manerkar, Aarti Gupta, Margaret Maronosi, Sharad Malik.
+        In Proceedings of the 2018 Conference on Formal Methods in Computer Aided Design (FMCAD), October-November 2018.
+        <a href="pubs/fmcad18-ilamcm.pdf" target="_blank" class="download_icon"></a>
+      </li>
+
+      <li><div class="publication"><b>MICRO '18</b></div>
+        "CheckMate: Automated Exploit Program Generation for Hardware Security Verification".
+        Caroline Trippel, Daniel Lustig, and Margaret Martonosi.
+        In Proceedings of the 51st International Symposium on Microarchitecture (MICRO), October 2018.
+        <a href="pubs/ctrippel_MICRO51.pdf" target="_blank" class="download_icon"></a>
+          <a href="https://github.com/ctrippel/checkmate" target="_blank" class="github_icon"></a>
+        <a href="https://www.youtube.com/watch?v=fCbLK4Ht_2Q&feature=youtu.be" target="_blank" class="video_icon"></a>
+      </li>
+
+      <li><div class="publication"><b>ARXIV '18</b></div>
+        "MeltdownPrime and SpectrePrime: Automatically-Synthesized Attacks Exploiting Invalidation-Based Coherence Protocols".
+        Caroline Trippel, Daniel Lustig, and Margaret Martonosi.
+        CoRR, abs/1802.03802, 2018.
+        <a href="https://arxiv.org/pdf/1802.03802.pdf" target="_blank" class="download_icon"></a>
+          <a href="media/SpectrePrime.mov" target="_blank" class="video_icon"></a>
+      </li>
+
+      <li><div class="publication"><b>TOP PICKS '18</b></div>
+        "Full-Stack Memory Model Verification with TriCheck".
+        Caroline Trippel, Yatin Manerkar, Daniel Lustig, Michael Pellauer, and Margaret Martonosi.
+        IEEE Micro, 38 (3), May-June 2018.
+        Issue: Top Picks from the Computer Architecture Conferences of 2017.
+        <a href="pubs/ctrippel_IEEETopPicks18.pdf" target="_blank" class="download_icon"></a>
+      </li>
+
+      <li><div class="publication"><b>ASPLOS '17</b></div>
+        "TriCheck: Memory Model Verification at the Trisection of Software, Hardware, and ISA".
+        Caroline Trippel, Yatin Manerkar, Daniel Lustig, Michael Pellauer, and Margaret Martonosi.
+        In Proceedings of the 22nd International Conference on Architectural Support for
+        Programming Languages and Operating Systems (ASPLOS), April 2017.
+        <a href="pubs/ctrippel_ASPLOS17.pdf" target="_blank" class="download_icon"></a>
+        <a href="talks/ctrippel_ASPLOS17_talk.pdf" target="_blank" class="ppt_icon"></a>
+        <a href="https://github.com/ctrippel/TriCheck" target="_blank" class="github_icon"></a>
+      </li>
+
+      <li><div class="publication"><b>ARXIV '16</b></div>
+        "Counterexamples and Proof Loophole for the C/C++ to POWER and ARMv7 Trailing-Sync Compiler Mappings".
+        Yatin Manerkar, Caroline Trippel, Daniel Lustig, Michael Pellauer, and Margaret Martonosi.
+        CoRR, abs/1611.01507, 2016.
+        <a href="https://arxiv.org/pdf/1611.01507v1.pdf" target="_blank" class="download_icon"></a>
+      </li>
+
+      <li><div class="publication"><b>ISCA '15</b></div>
+        "ArMOR: Defending Against Consistency Model Mismatches in Heterogeneous Architectures".
+        Daniel Lustig, Caroline Trippel, Michael Pellauer, and Margaret Martonosi.
+        In Proceedings of the 42nd International Symposium on Computer Architecture (ISCA), June 2015.
+        <a href="pubs/dlustig_ISCA15.pdf" target="_blank" class="download_icon"></a>
+        <a href="pubs/dlustig_ISCA15_TR.pdf" target="_blank" class="download_icon"></a>
+        <a href="talks/LustigArMOR.pdf" target="_blank" class="ppt_icon"></a>
+        <a href="https://github.com/daniellustig/armor" class="github_icon"></a>
+      </li>
+  </ul>
+
+  <div class="footer">© 2022 Stanford High Assurance Computer Architectures Lab</div>
+
+
+</body>
+</html>
