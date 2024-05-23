@@ -35,10 +35,10 @@ module rvfi_insn_check (
 			spec_valid_assume: assume(rvfi_spec.valid);
 
 			if (!`rvformal_addr_valid(rvfi_i.pc_rdata)) begin
-				trap_prop: 			assert(rvfi.trap);
-				trap_rd_addr_0_prop: assert(rvfi.rd_addr == 0);
-				trap_rd_wdata_0_prop: assert(rvfi.rd_wdata == 0);
-				trap_rd_wmask_0_prop: assert(rvfi.mem_wmask == 0);
+				trap_prop: 			assert(rvfi_i.trap);
+				trap_rd_addr_0_prop: assert(rvfi_i.rd_addr == 0);
+				trap_rd_wdata_0_prop: assert(rvfi_i.rd_wdata == 0);
+				trap_rd_wmask_0_prop: assert(rvfi_i.mem_wmask == 0);
 			end else begin
 
 				if (rvfi_i.rs1_addr == 0)
