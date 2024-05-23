@@ -1,0 +1,134 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// Copyright 2021 OpenHW Group
+//
+// Licensed under the Solderpad Hardware Licence, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     https://solderpad.org/licenses/
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+// SPDX-License-Identifier: Apache-2.0 WITH SHL-2.0
+//
+///////////////////////////////////////////////////////////////////////////////
+//
+// Manifest for the CVA6 CORE RTL model.
+//   - This is a CORE-ONLY manifest.
+//   - Relevent synthesis and simulation scripts/Makefiles must set the shell
+//     ENV variable CVA6_REPO_DIR.
+//
+///////////////////////////////////////////////////////////////////////////////
+
++define+WT_DCACHE
++define+RVFI_MEM
++define+RISCV_FORMAL
++define+RISCV_FORMAL_NRET=1
++define+RISCV_FORMAL_XLEN=32
++define+RISCV_FORMAL_ILEN=32
++define+RISCV_FORMAL_RESET_CYCLES=1
++define+RISCV_FORMAL_UNBOUNDED
+//+define+RISCV_FORMAL_CHECK_CYCLE=20
++define+RISCV_FORMAL_CHANNEL_IDX=0
++define+RISCV_FORMAL_CHECKER=rvfi_insn_check
+
++incdir+vendor/pulp-platform/common_cells/include/
++incdir+vendor/pulp-platform/common_cells/src/
++incdir+common/local/util/
+
+core/include/formal_config_pkg.sv
+core/include/riscv_pkg.sv
+core/include/ariane_dm_pkg.sv
+core/include/ariane_pkg.sv
+// TODO: ariane_axi_pkg is dependent on this.
+vendor/pulp-platform/axi/src/axi_pkg.sv
+core/include/ariane_rvfi_pkg.sv
+
+// Packages
+core/include/ariane_axi_pkg.sv
+core/include/wt_cache_pkg.sv
+core/include/std_cache_pkg.sv
+core/include/axi_intf.sv
+
+// RISCV Formal
+checks/rvfi_macros.vh
+checks/rvfi_testbench.sv
+checks/rvfi_insn_check.sv
+core/wrapper.sv
+
+//CVXIF
+core/include/cvxif_pkg.sv
+core/cvxif_example/include/cvxif_instr_pkg.sv
+core/cvxif_fu.sv
+
+// Common Cells
+vendor/pulp-platform/common_cells/src/cf_math_pkg.sv
+vendor/pulp-platform/common_cells/src/fifo_v3.sv
+vendor/pulp-platform/common_cells/src/lfsr.sv
+vendor/pulp-platform/common_cells/src/lzc.sv
+vendor/pulp-platform/common_cells/src/rr_arb_tree.sv
+vendor/pulp-platform/common_cells/src/shift_reg.sv
+vendor/pulp-platform/common_cells/src/unread.sv
+vendor/pulp-platform/common_cells/src/popcount.sv
+vendor/pulp-platform/common_cells/src/exp_backoff.sv
+
+// Common Cells for example coprocessor
+vendor/pulp-platform/common_cells/src/counter.sv
+vendor/pulp-platform/common_cells/src/delta_counter.sv
+
+// Top-level source files (not necessarily instantiated at the top of the cva6).
+core/cva6.sv
+core/alu.sv
+core/branch_unit.sv
+core/compressed_decoder.sv
+core/controller.sv
+core/csr_buffer.sv
+core/csr_regfile.sv
+core/decoder.sv
+core/ex_stage.sv
+core/instr_realign.sv
+core/id_stage.sv
+core/issue_read_operands.sv
+core/issue_stage.sv
+core/load_unit.sv
+core/load_store_unit.sv
+core/lsu_bypass.sv
+core/mult.sv
+core/multiplier.sv
+core/serdiv.sv
+core/perf_counters.sv
+core/ariane_regfile_ff.sv
+core/ariane_regfile_fpga.sv
+core/re_name.sv
+// NOTE: scoreboard.sv modified for DSIM (unchanged for other simulators)
+core/scoreboard.sv
+core/store_buffer.sv
+core/amo_buffer.sv
+core/store_unit.sv
+core/commit_stage.sv
+core/axi_shim.sv
+
+// What is "frontend"?
+core/frontend/btb.sv
+core/frontend/bht.sv
+core/frontend/ras.sv
+core/frontend/instr_scan.sv
+core/frontend/instr_queue.sv
+core/frontend/frontend.sv
+
+// Cache subsystem
+core/cache_subsystem/wt_dcache_ctrl.sv
+core/cache_subsystem/wt_dcache_mem.sv
+core/cache_subsystem/wt_dcache_missunit.sv
+core/cache_subsystem/wt_dcache_wbuffer.sv
+core/cache_subsystem/wt_dcache.sv
+core/cache_subsystem/cva6_icache.sv
+core/cache_subsystem/wt_cache_subsystem.sv
+core/cache_subsystem/wt_axi_adapter.sv
+
+// end of manifest
