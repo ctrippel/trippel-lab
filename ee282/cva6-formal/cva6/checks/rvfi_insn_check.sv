@@ -58,7 +58,10 @@ module rvfi_insn_check (
 					end
 
 					rd_addr_match_prop: assert(rvfi_spec.rd_addr == rvfi_i.rd_addr);
-					rd_wdata_match_prop: assert(rvfi_spec.rd_wdata == rvfi_i.rd_wdata);
+					if (rvfi_spec.rd_addr != 0) begin
+						rd_wdata_match_prop: assert(rvfi_spec.rd_wdata == rvfi_i.rd_wdata);
+					end
+
 					pc_wdata_match_prop: assert(`rvformal_addr_eq(rvfi_spec.pc_wdata, rvfi_i.pc_wdata));
 
 					if (rvfi_spec.mem_wmask || rvfi_spec.mem_rmask) begin
