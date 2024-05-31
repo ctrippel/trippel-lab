@@ -74,6 +74,8 @@ def gencheck(func):
             print(f"set_engine_mode {{Ht}}",file=f)
             print(f"set_engineH_first_trace_attempt 5",file=f)
             print(f"prove -all -cover ",file=f)
+            print(f"set_max_trace_length 13",file=f)
+            print(f"set_prove_time_limit 0s",file=f)
             print(f"load_radix_file radix.txt", file=f)
             print(f"set_engine_mode {{I N}}",file=f)
             print(f"prove -all -assert",file=f)
