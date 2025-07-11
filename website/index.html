@@ -17,6 +17,12 @@
 	  border-radius: 20%;
 	  object-fit: cover;
       }
+			.group_pic {
+				width: 450px;
+				height: 350px;
+				border-radius: 3%;
+				object-fit: cover;
+			}
       li {
 	  margin-bottom: 1em;
       }
@@ -206,6 +212,12 @@
 	  justify-content: center;
       }
 
+			.group_photo {
+				display:flex;
+				justify-content: center;
+				text-align: center;
+			}
+
       .person {
 	  width: 140px; 
 	  margin: 1.3em;
@@ -226,6 +238,12 @@
       .person_desc {
 	  position: relative;
 	  width: 140px;
+	  padding: 0;
+	  font-size: 100%;
+      }
+			      .group_photo_caption {
+	  position: relative;
+	  /* width: 140px; */
 	  padding: 0;
 	  font-size: 100%;
       }
@@ -548,10 +566,18 @@
 		   </div>
 		 </div> -->
 
-		 <br>
-		 <br>
-		 <br>
-		 <br>
+
+
+		 <hr class="divider" id="group photo">
+		 <div class="group_photo">
+			<img src="img/group-photo.jpg" class="group_pic" alt="group photo on a hike">
+			<br>
+			</div>
+			<!-- <br>
+			<div class="group_photo">
+			<p2 class="group_photo_caption">We also do high assurance hiking</p2>
+		 </div> -->
+
 
 		 <hr class="divider" id="projects">
 
